@@ -17,7 +17,9 @@ spec:
     chart: reflector
     targetRevision: '9.1.22'
     helm:
-      valuesObject:
+      values: |
+        podSecurityContext:
+          fsGroup: null
         securityContext:
           allowPrivilegeEscalation: false
           runAsUser: null
