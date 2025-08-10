@@ -2,7 +2,7 @@ kind: Secret
 apiVersion: v1
 metadata:
   name: repo-emberstack
-  namespace: argo
+  namespace: argocd
   labels:
     argocd.argoproj.io/secret-type: repository
   annotations:

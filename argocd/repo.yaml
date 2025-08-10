@@ -1,0 +1,13 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: repo-app-of-apps
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  name: app-of-apps
+  project: system
+  type: git
+  url: https://github.com/masonwb/app-of-apps.git
+type: Opaque
