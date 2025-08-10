@@ -16,6 +16,17 @@ spec:
     repoURL: https://emberstack.github.io/helm-charts
     chart: reflector
     targetRevision: '9.1.22'
+    helm:
+      valuesObject:
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: null
+          runAsNonRoot: true
+          seccompProfile:
+            type: RuntimeDefault
+          capabilities:
+            drop:
+              - ALL
   syncPolicy:
     automated: {}
     syncOptions:
